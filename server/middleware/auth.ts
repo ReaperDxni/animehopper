@@ -4,7 +4,7 @@ import { verifyRequestOrigin } from 'lucia'
 import type { Session, User } from 'lucia'
 
 export default defineEventHandler(async (event) => {
-  if (event.method !== 'GET' && !process.dev) {
+  if (event.method !== 'GET') {
     const originHeader = getHeader(event, 'Origin') ?? null
     const hostHeader = getHeader(event, 'Host') ?? null
     if (!originHeader || !hostHeader || !verifyRequestOrigin(originHeader, [hostHeader])) {

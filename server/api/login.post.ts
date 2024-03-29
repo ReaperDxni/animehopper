@@ -21,7 +21,6 @@ export default defineEventHandler(async (event) => {
   if (!hashedString) {
     return { message: 'Invalid password' }
   }
-  console.log('Creaitng session')
   const session = await lucia.createSession(user.id, {})
   appendHeader(event, 'Set-Cookie', lucia.createSessionCookie(session.id).serialize())
   return { user, sessionToken: session.id }
