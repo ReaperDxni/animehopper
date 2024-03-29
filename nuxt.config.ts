@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   typescript: {
     shim: false
   },
+  naiveui: { colorModePreference: 'dark' },
   tailwindcss: {
     exposeConfig: true,
     config: {
@@ -17,6 +18,7 @@ export default defineNuxtConfig({
         extend: {
           colors: {
             backcolor: '#0A090C',
+            lightbackcolor: '#0F0D11',
             primary: '#D62828',
             secondary: '#60D394'
           }
