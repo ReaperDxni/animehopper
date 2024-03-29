@@ -20,11 +20,7 @@
       </div>
     </div>
     <div class="w-96">
-      <n-input class="bg-backcolor" size="medium" maxlength="60" placeholder="Search...">
-        <template #prefix>
-          <Icon name="oui:search" />
-        </template>
-      </n-input>
+      <SearchBar />
     </div>
     <div class="flex items-center">
       <n-button type="error" ghost>
