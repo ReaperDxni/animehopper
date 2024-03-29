@@ -9,6 +9,7 @@ export default defineEventHandler(async (event) => {
     loginRequestSchema.parse(body)
   } catch (error) {
     setResponseStatus(event, 409)
+    console.error('Invalid body', error)
     return { message: 'Please provide a valid body' }
   }
   const user = await event.context.prisma.user.findFirst({ where: { name: body.name } })
@@ -20,6 +21,7 @@ export default defineEventHandler(async (event) => {
   if (!hashedString) {
     return { message: 'Invalid password' }
   }
+  console.log('Creaitng session')
   const session = await lucia.createSession(user.id, {})
   appendHeader(event, 'Set-Cookie', lucia.createSessionCookie(session.id).serialize())
   return { user, sessionToken: session.id }

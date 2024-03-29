@@ -1,11 +1,11 @@
 import type { User } from 'lucia'
 
-export const useUser = () => {
+const useUser = () => {
   const user = useState<User | null>('user', () => null)
   return user
 }
 
-export const useAuthenticatedUser = () => {
+const useAuthenticatedUser = () => {
   const user = useUser()
   return computed(() => {
     const userValue = unref(user)
@@ -14,4 +14,18 @@ export const useAuthenticatedUser = () => {
     }
     return userValue
   })
+}
+
+const refreshUserState = async () => {
+  const user = useUser()
+  const data = await useRequestFetch()('/api/user')
+  if (data) {
+    user.value = data
+  } else {
+    user.value = null
+  }
+}
+
+export const useAuth = () => {
+  return { useUser, useAuthenticatedUser, refreshUserState }
 }
