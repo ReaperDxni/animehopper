@@ -1,5 +1,7 @@
 <template>
-  <div class="">
-    <h1>This is a test</h1>
+  <div class="bg-black h-screen">
+    <h1 class="text-white">
+      This is a test number 2
+    </h1>
   </div>
 </template>
