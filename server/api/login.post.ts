@@ -1,5 +1,4 @@
 import { z } from 'zod'
-import { createSession } from '../service/session_service'
 import { compareString } from '~/utils/hash'
 
 const loginRequestSchema = z.object({ name: z.string(), password: z.string() })
@@ -21,6 +20,7 @@ export default defineEventHandler(async (event) => {
   if (!hashedString) {
     return { message: 'Invalid password' }
   }
-  const session = await createSession(user)
+  const session = await lucia.createSession(user.id, {})
+  appendHeader(event, 'Set-Cookie', lucia.createSessionCookie(session.id).serialize())
   return { user, sessionToken: session.id }
 })

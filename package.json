@@ -15,7 +15,6 @@
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/tailwindcss": "^6.10.4",
-    "@sidebase/nuxt-auth": "^0.6.4",
     "@types/bcrypt": "^5.0.2",
     "@types/node": "^18.11.18",
     "eslint": "^8.33.0",
@@ -26,11 +25,11 @@
     "vue-tsc": "^1.0.24"
   },
   "dependencies": {
+    "@lucia-auth/adapter-prisma": "^4.0.1",
     "@prisma/client": "^5.7.1",
     "bcrypt": "^5.1.1",
+    "lucia": "^3.1.1",
+    "oslo": "^1.2.0",
     "zod": "^3.22.4"
-  },
-  "peerDependencies": {
-    "next-auth": "4.21.1"
   }
 }

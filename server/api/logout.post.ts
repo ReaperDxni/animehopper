@@ -1,15 +1,9 @@
-import { deleteSession, findSession } from '../service/session_service'
-
 export default defineEventHandler(async (event) => {
-  const header = event.headers.get('Authorization')
-  if (!header) {
-    return false
+  if (!event.context.session) {
+    throw createError({
+      statusCode: 403
+    })
   }
-  const token = header.replace('Bearer', '').replace(' ', '')
-  const session = await findSession(token)
-  if (!session) {
-    return false
-  }
-  await deleteSession(token)
-  return true
+  await lucia.invalidateSession(event.context.session.id)
+  appendHeader(event, 'Set-Cookie', lucia.createBlankSessionCookie().serialize())
 })
