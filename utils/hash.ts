@@ -1,7 +1,13 @@
-import { hash } from 'bcrypt'
+import { hash, compare, genSalt } from 'bcrypt'
 
-const salt = 10
-const hashString = async (value: string) => {
+const generateSalt = async (rounds: number) => await genSalt(rounds)
+
+const hashString = async (value: string, salt: string) => {
   return await hash(value, salt)
 }
-export default hashString
+
+const compareString = async (value: string, hash: string) => {
+  return await compare(value, hash)
+}
+
+export { hashString, compareString, generateSalt }

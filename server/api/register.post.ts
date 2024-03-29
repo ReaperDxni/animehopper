@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import hashString from '~/utils/hash'
+import { hashString, generateSalt } from '~/utils/hash'
 const registerRequestSchema = z.object({ name: z.string(), password: z.string() })
 
 export default defineEventHandler(async (event) => {
@@ -16,8 +16,8 @@ export default defineEventHandler(async (event) => {
     setResponseStatus(event, 403)
     return { message: 'This name is taken' }
   }
-
-  const hash = await hashString(body.password)
-  const result = await users.create({ data: { name: body.name, password: hash } })
+  const salt = await generateSalt(10)
+  const hash = await hashString(body.password, salt)
+  const result = await users.create({ data: { name: body.name, password: hash, salt } })
   return result
 })

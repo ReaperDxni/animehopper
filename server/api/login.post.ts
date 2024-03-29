@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import type { User } from '~/types/user'
+import { compareString } from '~/utils/hash'
 
 const loginRequestSchema = z.object({ name: z.string(), password: z.string() })
 
@@ -16,4 +16,11 @@ export default defineEventHandler(async (event) => {
     setResponseStatus(event, 404)
     return { message: 'User not found' }
   }
+  const hashedString = await compareString(body.password, user.password)
+  if (!hashedString) {
+    return { message: 'Invalid password' }
+  }
+  // Create session
+
+  return { user, sessionToken: 'sssdss' }
 })
