@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { createSession } from '../service/session_service'
 import { compareString } from '~/utils/hash'
 
 const loginRequestSchema = z.object({ name: z.string(), password: z.string() })
@@ -20,7 +21,6 @@ export default defineEventHandler(async (event) => {
   if (!hashedString) {
     return { message: 'Invalid password' }
   }
-  // Create session
-
-  return { user, sessionToken: 'sssdss' }
+  const session = await createSession(user)
+  return { user, sessionToken: session.id }
 })
