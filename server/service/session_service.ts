@@ -9,9 +9,13 @@ const deleteSession = async (id: string) => {
   return await prisma.session.delete({ where: { id } })
 }
 
+const findSession = async (id: string) => {
+  return await prisma.session.findUnique({ where: { id } })
+}
+
 const isSessionValid = async (id: string) => {
   const session = await prisma.session.findUnique({ where: { id } })
   return session && session.expiresAt > new Date()
 }
 
-export { createSession, deleteSession, isSessionValid }
+export { createSession, deleteSession, findSession, isSessionValid }
