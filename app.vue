@@ -19,17 +19,19 @@ const themeOverrides: GlobalThemeOverrides = {
 <template>
   <div>
     <n-config-provider :theme="darkTheme" :theme-overrides="themeOverrides">
-      <div class="bg-backcolor h-screen flex flex-col">
-        <NavBar />
-        <NuxtPage />
-      </div>
+      <n-message-provider placement="bottom-right">
+        <div class="bg-backcolor h-screen flex flex-col">
+          <NavBar />
+          <NuxtPage />
+        </div>
+      </n-message-provider>
     </n-config-provider>
   </div>
 </template>
 <style>
 .page-enter-active,
 .page-leave-active {
-  transition: all 0.1s;
+  transition: all 0.25s;
 }
 .page-enter-from,
 .page-leave-to {

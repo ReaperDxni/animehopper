@@ -2,9 +2,12 @@
 const { useUser, signOut } = useAuth()
 const user = useUser()
 
-function handleClick (key: string | number) {
+const message = useMessage()
+
+async function handleClick (key: string | number) {
   if (key === 'logout') {
-    signOut()
+    await signOut()
+    message.warning('You have successfully logged out!')
   }
 }
 const options = [

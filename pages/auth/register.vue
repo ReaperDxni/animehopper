@@ -1,13 +1,15 @@
 <script setup lang="ts">
 import { type FormInst } from 'naive-ui'
 
+const { signUp } = useAuth()
+
 const message = useMessage()
-const { signIn } = useAuth()
 
 const formRef = ref<FormInst | null>(null)
 const formValue = ref({
   name: '',
-  password: ''
+  password: '',
+  repeatPassword: ''
 })
 
 const rules = {
@@ -20,16 +22,32 @@ const rules = {
     required: true,
     message: 'Password is required',
     trigger: 'blur'
+  },
+  repeatPassword: {
+    required: true,
+    message: 'Repeat password is required',
+    trigger: 'blur'
   }
 }
 
-function handleLogin (e: MouseEvent) {
+const inputRepeatPasswordValidation = computed(() => {
+  if (formValue.value.password === formValue.value.repeatPassword) {
+    return undefined
+  } else {
+    return 'error'
+  }
+})
+const inputRepeatPasswordFeedback = computed(() => {
+  return inputRepeatPasswordValidation.value ? 'Passwords do not match' : ''
+})
+
+function handleRegister (e: MouseEvent) {
   e.preventDefault()
   formRef.value?.validate(async (errors) => {
     if (!errors) {
-      await signIn(formValue.value.name, formValue.value.password)
-      navigateTo('/')
-      message.success('You have successfully logged in!')
+      await signUp(formValue.value.name, formValue.value.password)
+      navigateTo('/auth/login')
+      message.success('You have successfully registered! Please sign in now!')
     }
   })
 }
@@ -41,9 +59,9 @@ function handleLogin (e: MouseEvent) {
     <div class="w-full h-full flex items-center justify-center backdrop-blur bg-gradient-to-b from-black to-black/40">
       <n-card class="w-full sm:w-1/2 xl:w-1/4 mx-5 py-2 px-3 shadow -space-y-2">
         <template #header>
-          <h1>Sign in</h1>
+          <h1>Sign up</h1>
           <p class="text-sm text-gray-400">
-            with your AnimeHopper account
+            Create a brand new account
           </p>
         </template>
         <div class="flex flex-col">
@@ -63,6 +81,9 @@ function handleLogin (e: MouseEvent) {
             <n-form-item path="password">
               <n-input v-model:value="formValue.password" type="password" placeholder="Password" />
             </n-form-item>
+            <n-form-item path="repeatPassword" :feedback="inputRepeatPasswordFeedback" :validation-status="inputRepeatPasswordValidation">
+              <n-input v-model:value="formValue.repeatPassword" type="password" placeholder="Repeat Password" />
+            </n-form-item>
 
             <n-form-item
               class="mx-auto flex pt-6 pb-3"
@@ -70,14 +91,14 @@ function handleLogin (e: MouseEvent) {
               <n-button
                 type="primary"
                 ghost
-                @click="handleLogin"
+                @click="handleRegister"
               >
                 <span class="px-3">Submit</span>
               </n-button>
             </n-form-item>
           </n-form>
 
-          <span class="text-center text-gray-400">Don't have an account yet? <NuxtLink href="/auth/register" class="cursor-pointer text-primary hover:text-primary/70 transition">Register now</NuxtLink></span>
+          <span class="text-center text-gray-400">Already have an account? <NuxtLink href="/auth/login" class="cursor-pointer text-primary hover:text-primary/70 transition">Sign in</NuxtLink></span>
         </div>
       </n-card>
     </div>
