@@ -22,12 +22,13 @@ const options = [
 
 <template>
   <div class="flex items-center gap-2 mr-3">
-    <span class="text-gray-300 font-semibold"> {{ user?.name }}</span>
+    <span class="text-gray-300 font-semibold"> <span class="text-gray-400 font-medium">Hello, </span> {{ user?.name }}</span>
     <n-dropdown :options="options" class="bg-lightbackcolor" @select="handleClick">
       <n-avatar
         round
-        :size="32"
-        src="https://07akioni.oss-cn-beijing.aliyuncs.com/07akioni.jpeg"
+        :size="38"
+        :bordered="true"
+        src="https://pics.craiyon.com/2023-10-19/ebd05cc8b06f4c439bccef6994f74fc1.webp"
         class="hover:cursor-pointer"
       />
     </n-dropdown>
