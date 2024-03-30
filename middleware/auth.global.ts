@@ -1,4 +1,7 @@
-export default defineNuxtRouteMiddleware(async () => {
-  const { refreshUserState } = useAuth()
-  await refreshUserState()
+export default defineNuxtRouteMiddleware((event) => {
+  const { useUser } = useAuth()
+  const user = useUser()
+  if (event.path.startsWith('/auth') && user.value) {
+    return navigateTo('/')
+  }
 })
