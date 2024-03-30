@@ -26,6 +26,24 @@ const refreshUserState = async () => {
   }
 }
 
+const signIn = async (username: string, password: string) => {
+  await $fetch('/api/login', {
+    method: 'POST',
+    body: {
+      name: username,
+      password
+    }
+  })
+  await refreshUserState()
+}
+
+const signOut = async () => {
+  await $fetch('/api/logout', {
+    method: 'POST'
+  })
+  await refreshUserState()
+}
+
 export const useAuth = () => {
-  return { useUser, useAuthenticatedUser, refreshUserState }
+  return { useUser, useAuthenticatedUser, refreshUserState, signIn, signOut }
 }

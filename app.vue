@@ -3,7 +3,8 @@ import { darkTheme } from 'naive-ui'
 import type { GlobalThemeOverrides } from 'naive-ui'
 const themeOverrides: GlobalThemeOverrides = {
   common: {
-    primaryColor: '#D62828'
+    primaryColor: '#D62828',
+    primaryColorHover: '#b31e1e'
   },
   Input: {
     borderFocus: '1px solid #D62828',
@@ -25,3 +26,14 @@ const themeOverrides: GlobalThemeOverrides = {
     </n-config-provider>
   </div>
 </template>
+<style>
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.1s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(1rem);
+}
+</style>

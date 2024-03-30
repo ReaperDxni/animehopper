@@ -6,6 +6,9 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@nuxtjs/google-fonts'
   ],
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
   typescript: {
     shim: false
   },
