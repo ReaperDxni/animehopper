@@ -12,6 +12,9 @@ const themeOverrides: GlobalThemeOverrides = {
     colorFocus: 'none',
     borderHover: '1px solid #D62828',
     color: '#0A090C'
+  },
+  InternalSelectMenu: {
+    color: '#0F0D11'
   }
 }
 
