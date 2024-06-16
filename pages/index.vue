@@ -28,9 +28,9 @@ const recommendations = [
 </script>
 
 <template>
-  <div class="">
+  <div class="overflow-x-hidden">
     <n-carousel
-      class="mt-4"
+      class="mt-4 w-full"
       effect="card"
       prev-slide-style="transform: translateX(-150%) translateZ(-800px);"
       next-slide-style="transform: translateX(50%) translateZ(-800px);"
@@ -53,5 +53,54 @@ const recommendations = [
         >
       </n-carousel-item>
     </n-carousel>
+    <div class="w-9/12 mx-auto">
+      <n-divider title-placement="left">
+        <h1 class="text-xl font-bold text-gray-300">
+          Popular Animes
+        </h1>
+      </n-divider>
+      <div class="w-full flex justify-center my-10 gap-10">
+        <RecommendationCard
+          title="Solo Leveling"
+          description="Best Anime and Manwha in wörld"
+          :rating="5"
+          :seasons="1"
+          :episodes="13"
+          image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+        />
+        <RecommendationCard
+          title="Solo Leveling"
+          description="Best Anime and Manwha in wörld"
+          :rating="5"
+          :seasons="1"
+          :episodes="13"
+          image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+        />
+        <RecommendationCard
+          title="Solo Leveling"
+          description="Best Anime and Manwha in wörld"
+          :rating="5"
+          :seasons="1"
+          :episodes="13"
+          image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+        />
+        <RecommendationCard
+          title="Solo Leveling"
+          description="Best Anime and Manwha in wörld"
+          :rating="5"
+          :seasons="1"
+          :episodes="13"
+          image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+        />
+        <RecommendationCard
+          title="Solo Leveling"
+          description="Best Anime and Manwha in wörld"
+          :rating="5"
+          :seasons="1"
+          :episodes="13"
+          image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+        />
+      </div>
+    </div>
   </div>
 </template>

@@ -4,7 +4,7 @@ const user = useUser()
 </script>
 
 <template>
-  <nav class="w-screen h-16 bg-lightbackcolor flex justify-between items-center px-12">
+  <nav class="w-full h-16 bg-lightbackcolor flex justify-between items-center px-12">
     <div class="flex items-center space-x-12">
       <h1 class="font-bold text-2xl text-gray-200 hover:cursor-pointer">
         ANIME<span class="text-primary">HOPPER</span>

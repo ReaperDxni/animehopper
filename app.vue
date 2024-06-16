@@ -23,7 +23,7 @@ const themeOverrides: GlobalThemeOverrides = {
   <div>
     <n-config-provider :theme="darkTheme" :theme-overrides="themeOverrides">
       <n-message-provider placement="bottom-right">
-        <div class="bg-backcolor h-screen flex flex-col">
+        <div class="bg-backcolor h-screen flex flex-col w-screen">
           <NavBar />
           <NuxtPage />
         </div>
@@ -40,5 +40,24 @@ const themeOverrides: GlobalThemeOverrides = {
 .page-leave-to {
   opacity: 0;
   filter: blur(1rem);
+}
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #383838;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #676767;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 </style>
