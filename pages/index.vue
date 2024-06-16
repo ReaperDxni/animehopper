@@ -25,6 +25,41 @@ const recommendations = [
     rating: 5
   }
 ]
+const popularAnimes = [
+  {
+    title: 'Solo Leveling',
+    description: 'Best Anime and Manwha in wörld',
+    image: 'https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg',
+    rating: 5,
+    seasons: 1,
+    episodes: 13
+
+  },
+  {
+    title: 'Attack on Titan',
+    description: 'When angry boy becomes titan to kill titan wattafak',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzU_3j4ivd-S9LBSrljqPJLYjNpm2VFOmIpg&s',
+    rating: 5,
+    seasons: 4,
+    episodes: 72
+  },
+  {
+    title: 'Seven deadly sins',
+    description: 'gawno',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxWqa1EF8bc4x5KMuQP3pRGoMVBWQj8piDzA&s',
+    rating: 3,
+    seasons: 5,
+    episodes: 100
+  },
+  {
+    title: 'Jojos Bizzare Adventure',
+    description: 'Gay men fights more gay men',
+    image: 'https://i.ebayimg.com/images/g/t10AAOSwimBjjREd/s-l1200.webp',
+    rating: 5,
+    seasons: 6,
+    episodes: 158
+  }
+]
 </script>
 
 <template>
@@ -61,12 +96,14 @@ const recommendations = [
       </n-divider>
       <div class="w-full flex justify-center my-10 gap-10">
         <RecommendationCard
-          title="Solo Leveling"
-          description="Best Anime and Manwha in wörld"
-          :rating="5"
-          :seasons="1"
-          :episodes="13"
-          image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
+          v-for="anime in popularAnimes"
+          :key="anime.title"
+          :title="anime.title"
+          :description="anime.description"
+          :rating="anime.rating"
+          :seasons="anime.seasons"
+          :episodes="anime.episodes"
+          :image="anime.image"
         />
       </div>
     </div>
