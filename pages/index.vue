@@ -68,38 +68,6 @@ const recommendations = [
           :episodes="13"
           image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
         />
-        <RecommendationCard
-          title="Solo Leveling"
-          description="Best Anime and Manwha in wörld"
-          :rating="5"
-          :seasons="1"
-          :episodes="13"
-          image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
-        />
-        <RecommendationCard
-          title="Solo Leveling"
-          description="Best Anime and Manwha in wörld"
-          :rating="5"
-          :seasons="1"
-          :episodes="13"
-          image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
-        />
-        <RecommendationCard
-          title="Solo Leveling"
-          description="Best Anime and Manwha in wörld"
-          :rating="5"
-          :seasons="1"
-          :episodes="13"
-          image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
-        />
-        <RecommendationCard
-          title="Solo Leveling"
-          description="Best Anime and Manwha in wörld"
-          :rating="5"
-          :seasons="1"
-          :episodes="13"
-          image="https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg"
-        />
       </div>
     </div>
   </div>
