@@ -23,9 +23,10 @@ const themeOverrides: GlobalThemeOverrides = {
   <div>
     <n-config-provider :theme="darkTheme" :theme-overrides="themeOverrides">
       <n-message-provider placement="bottom-right">
-        <div class="bg-backcolor h-screen flex flex-col w-screen">
+        <div class="bg-backcolor flex flex-col w-screen">
           <NavBar />
           <NuxtPage />
+          <Footer />
         </div>
       </n-message-provider>
     </n-config-provider>

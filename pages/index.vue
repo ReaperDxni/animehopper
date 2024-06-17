@@ -2,33 +2,33 @@
 const recommendations = [
   {
     title: 'Solo Leveling',
-    description: 'Best Anime and Manwha in wörld',
-    image: 'https://img.anime2you.de/2023/03/solo-leveling.jpg',
+    description: 'Follows the adventures Sung Jinwoo in a world that is constantly threatened by monsters and the evil forces. In his battles Sung transforms himself from weakest hunter of all mankind to one of the strongest hunters in existence.',
+    image: 'https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg',
     rating: 5
   },
   {
     title: 'Attack on Titan',
-    description: 'When angry boy becomes titan to kill titan wattafak',
-    image: 'https://i.pinimg.com/originals/7a/0d/c2/7a0dc24f568b81a39ba1ce797f65d355.jpg',
+    description: 'After his hometown is destroyed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzU_3j4ivd-S9LBSrljqPJLYjNpm2VFOmIpg&s',
     rating: 5
   },
   {
     title: 'Seven Deadly Sins',
-    description: 'gawno',
-    image: 'https://static.bandainamcoent.eu/high/seven-deadly-sins/seven-deadly-sins/00-page-setup/sds_game-thumbnail.jpg',
+    description: 'The Seven Deadly Sins (七つの大罪, Nanatsu no Taizai) were the strongest and cruelest order of Holy Knights in the kingdom, formed by Meliodas and six other brutal criminals from various races who were branded symbols of beasts to symbolize the sin that motivated their crimes.',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxWqa1EF8bc4x5KMuQP3pRGoMVBWQj8piDzA&s',
     rating: 3
   },
   {
     title: 'Jojos Bizzare Adventure',
-    description: 'Gay men fights more gay men',
-    image: 'https://p325k7wa.twic.pics/high/jojo/jojo-bizarre-adventure-all-star-battle-r/jojo-header-mobile.jpg?twic=v1/resize=760/step=10/quality=80',
+    description: 'The story of the Joestar family, who are possessed with intense psychic strength, and the adventures each member encounters throughout their lives. The story of the Joestar family, who are possessed with intense psychic strength, and the adventures each member encounters throughout their lives.',
+    image: 'https://i.ebayimg.com/images/g/t10AAOSwimBjjREd/s-l1200.webp',
     rating: 5
   }
 ]
 const popularAnimes = [
   {
     title: 'Solo Leveling',
-    description: 'Best Anime and Manwha in wörld',
+    description: 'Follows the adventures Sung Jinwoo in a world that is constantly threatened by monsters and the evil forces. In his battles Sung transforms himself from weakest hunter of all mankind to one of the strongest hunters in existence.',
     image: 'https://m.media-amazon.com/images/M/MV5BYWMwYmYwNjMtMmE0MC00ODdhLTgzYzQtYzA3MDQ5OWRmZWNhXkEyXkFqcGdeQXVyMTUzMTg2ODkz._V1_.jpg',
     rating: 5,
     seasons: 1,
@@ -37,7 +37,7 @@ const popularAnimes = [
   },
   {
     title: 'Attack on Titan',
-    description: 'When angry boy becomes titan to kill titan wattafak',
+    description: 'After his hometown is destroyed, young Eren Jaeger vows to cleanse the earth of the giant humanoid Titans that have brought humanity to the brink of extinction.',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzU_3j4ivd-S9LBSrljqPJLYjNpm2VFOmIpg&s',
     rating: 5,
     seasons: 4,
@@ -45,7 +45,7 @@ const popularAnimes = [
   },
   {
     title: 'Seven Deadly Sins',
-    description: 'gawno',
+    description: 'The Seven Deadly Sins (七つの大罪, Nanatsu no Taizai) were the strongest and cruelest order of Holy Knights in the kingdom, formed by Meliodas and six other brutal criminals from various races who were branded symbols of beasts to symbolize the sin that motivated their crimes.',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxWqa1EF8bc4x5KMuQP3pRGoMVBWQj8piDzA&s',
     rating: 3,
     seasons: 5,
@@ -53,7 +53,7 @@ const popularAnimes = [
   },
   {
     title: 'Jojos Bizzare Adventure',
-    description: 'Gay men fights more gay men',
+    description: 'The story of the Joestar family, who are possessed with intense psychic strength, and the adventures each member encounters throughout their lives. The story of the Joestar family, who are possessed with intense psychic strength, and the adventures each member encounters throughout their lives.',
     image: 'https://i.ebayimg.com/images/g/t10AAOSwimBjjREd/s-l1200.webp',
     rating: 5,
     seasons: 6,
@@ -61,7 +61,7 @@ const popularAnimes = [
   },
   {
     title: 'Sword Art Online',
-    description: 'first season good after that its shit',
+    description: 'In 2022, a virtual reality massively multiplayer online role-playing game (VRMMORPG) called Sword Art Online (SAO) was released. With the NerveGear, a helmet that stimulates the users five senses via their brain, players can experience and control their in-game characters with their minds.',
     image: 'https://cdn.anisearch.de/images/anime/cover/7/7335_600.webp',
     rating: 3,
     seasons: 3,
