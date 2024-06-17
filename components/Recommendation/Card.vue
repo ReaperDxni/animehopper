@@ -10,8 +10,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="h-96 w-64 relative">
-    <div class="absolute hover:bg-black/85 opacity-0 hover:opacity-100 w-full h-full transition flex justify-between flex-col p-3">
+  <div class="h-96 w-64 relative hover:scale-[102%] transition">
+    <div class="absolute hover:bg-black/85 opacity-0 hover:opacity-100 w-full h-full transition flex justify-between flex-col p-3 cursor-pointer">
       <div class="flex justify-start flex-col">
         <h1 class="text-gray-300 text-lg font-bold">
           {{ props.title }}

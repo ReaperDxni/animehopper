@@ -13,7 +13,7 @@ const recommendations = [
     rating: 5
   },
   {
-    title: 'Seven deadly sins',
+    title: 'Seven Deadly Sins',
     description: 'gawno',
     image: 'https://static.bandainamcoent.eu/high/seven-deadly-sins/seven-deadly-sins/00-page-setup/sds_game-thumbnail.jpg',
     rating: 3
@@ -44,7 +44,7 @@ const popularAnimes = [
     episodes: 72
   },
   {
-    title: 'Seven deadly sins',
+    title: 'Seven Deadly Sins',
     description: 'gawno',
     image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxWqa1EF8bc4x5KMuQP3pRGoMVBWQj8piDzA&s',
     rating: 3,
@@ -58,6 +58,14 @@ const popularAnimes = [
     rating: 5,
     seasons: 6,
     episodes: 158
+  },
+  {
+    title: 'Sword Art Online',
+    description: 'first season good after that its shit',
+    image: 'https://cdn.anisearch.de/images/anime/cover/7/7335_600.webp',
+    rating: 3,
+    seasons: 3,
+    episodes: 96
   }
 ]
 </script>
@@ -91,7 +99,45 @@ const popularAnimes = [
     <div class="w-9/12 mx-auto">
       <n-divider title-placement="left">
         <h1 class="text-xl font-bold text-gray-300">
+          Recent Animes
+        </h1>
+      </n-divider>
+      <div class="w-full flex justify-center my-10 gap-10">
+        <RecommendationCard
+          v-for="anime in popularAnimes"
+          :key="anime.title"
+          :title="anime.title"
+          :description="anime.description"
+          :rating="anime.rating"
+          :seasons="anime.seasons"
+          :episodes="anime.episodes"
+          :image="anime.image"
+        />
+      </div>
+    </div>
+    <div class="w-9/12 mx-auto">
+      <n-divider title-placement="center">
+        <h1 class="text-xl font-bold text-gray-300">
           Popular Animes
+        </h1>
+      </n-divider>
+      <div class="w-full flex justify-center my-10 gap-10">
+        <RecommendationCard
+          v-for="anime in popularAnimes"
+          :key="anime.title"
+          :title="anime.title"
+          :description="anime.description"
+          :rating="anime.rating"
+          :seasons="anime.seasons"
+          :episodes="anime.episodes"
+          :image="anime.image"
+        />
+      </div>
+    </div>
+    <div class="w-9/12 mx-auto">
+      <n-divider title-placement="right">
+        <h1 class="text-xl font-bold text-gray-300">
+          Hentai Animes
         </h1>
       </n-divider>
       <div class="w-full flex justify-center my-10 gap-10">
